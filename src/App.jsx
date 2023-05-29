@@ -1,4 +1,4 @@
-
+import Button from "./components/Button"
 function App() {
 
   return (
@@ -9,6 +9,7 @@ function App() {
       <section>
         <h4>Animated Button</h4>
         <div>Move your mouse over the button to see the effect</div>
+        <Button text="Hover Me" />
       </section>
       <section>
         <h4>Animated Modals</h4>

@@ -1,9 +1,10 @@
+import { motion } from "framer-motion"
 export default function ({ text }) {
     return (
         <>
-            <button>
+            <motion.button whileHover={{ scale: 1.1 }}>
                 {text}
-            </button>
+            </motion.button>
         </>
     )
 }

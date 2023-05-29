@@ -13,13 +13,7 @@ section {
   padding: 10px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  transition: 450ms;
   min-height: 10px;
-}
-
-section:hover{
-  background-color: rgb(225, 223, 222);
-  transition: 450ms;
 }
 
 section:nth-of-type(1) {
