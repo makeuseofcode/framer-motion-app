@@ -1,11 +1,21 @@
 * {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 body {
   text-align: center;
-  width:fit-content;
   margin: 0 auto;
+  max-width: 50%;
+}
+
+.help {
+  max-height: 150px;
+  /* height: 300px; */
+  background-color: red;
+  padding: 20px;
+  cursor: pointer;
+
 }
 
 section {
@@ -13,24 +23,19 @@ section {
   padding: 10px 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  transition: 450ms;
   min-height: 10px;
-}
-
-section:hover{
-  background-color: rgb(225, 223, 222);
-  transition: 450ms;
 }
 
 section:nth-of-type(1) {
   margin-top: 10px;
 }
 
-section > div {
+section>div {
   font-size: 10px;
   margin-top: -10px;
   margin-bottom: 30px;
 }
+
 button {
   background-color: blue;
   color: white;
@@ -40,4 +45,35 @@ button {
   margin-bottom: 10px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.backdrop {
+  position: absolute;
+  background-color: rgba(13, 11, 11, 0.901);
+  backdrop-filter: none;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  width: clamp(50%, 400px, 90%);
+  height: min(50%, 350px);
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 25%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-element {
+  height: 150px;
+  width: initial;
+  background-color: grey;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
 }
