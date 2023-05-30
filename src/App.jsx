@@ -1,9 +1,11 @@
 import { useState } from "react";
-import { AnimatePresence, animate, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Button from "./components/Button"
 import Modal from "./components/Modal"
+import ScrollElement from "./components/ScrollElement";
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
+  let scrollElementCount = 14;
 
   function closeModal() {
     setModalOpen(false);
@@ -30,6 +32,7 @@ function App() {
         <section>
           <h4>Animating on Scroll</h4>
           <div>Scroll down to see elements animate elegantly as they scroll into view.</div>
+          {[...Array(scrollElementCount)].map((x, i) => <ScrollElement key={i} />)}
         </section>
       </div>
     </>
@@ -37,3 +40,4 @@ function App() {
 }
 
 export default App
+
